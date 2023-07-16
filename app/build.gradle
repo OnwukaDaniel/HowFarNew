@@ -1,0 +1,190 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\HP\\AndroidStudioProjects\\MyKeys.jks')
+            storePassword 'Azure@16'
+            keyAlias 'key0'
+            keyPassword 'Azure@16'
+        }
+    }
+    compileSdk 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.azur.howfar"
+        minSdk 26
+        targetSdk 33
+        versionCode 9
+        versionName "9.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    packagingOptions {
+        pickFirst '**/*.so'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
+
+    //implementation files('C:/Users/HP/Downloads/Compressed/Agora_Native_SDK_for_Android_FULL/rtc/sdk/agora-rtc-sdk.jar')
+    def camerax_version = '1.3.0-alpha04'
+    def camerax_ext_version = '1.3.0-alpha04'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0' //Don't update because of a bottom sheet needed in MainActivity.
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'com.google.android.gms:play-services-cast-framework:21.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Camera
+    implementation "androidx.camera:camera-core:$camerax_version"
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-extensions:$camerax_ext_version"
+    implementation "androidx.camera:camera-view:$camerax_version"
+    implementation "androidx.camera:camera-video:$camerax_version"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+    //lotti
+    implementation 'com.airbnb.android:lottie:3.6.1'
+ 
+    implementation 'com.google.code.gson:gson:2.8.9'
+    //exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.18.4'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.18.4'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.18.4'
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.4'
+    implementation 'com.google.android.exoplayer:extension-okhttp:2.18.4'
+    //spinkit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    //likeButton
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+//emoji
+    implementation 'com.vanniktech:emoji-facebook:0.7.0'
+    // FIRE BASE
+    implementation platform('com.google.firebase:firebase-bom:30.3.1')
+    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.synnapps:carouselview:0.1.5'
+
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation "androidx.fragment:fragment-ktx:1.5.5"
+    // sor network call
+    implementation 'com.squareup.okhttp3:okhttp:4.9.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.2'
+
+    implementation ('io.agora.rtc:full-sdk:4.0.1'){
+        exclude group : 'libagora_ai_noise_suppression_extension.so'
+        exclude group : 'libagora_audio_beauty_extension.so'
+        exclude group : 'libagora_clear_vision_extension.so'
+        exclude group : 'libagora_content_inspect_extension.so'
+        exclude group : 'libagora_dav1d.so'
+        exclude group : 'libagora_drm_loader_extension.so'
+        exclude group : 'libagora_screen_capture_extension.so'
+        exclude group : 'libagora_segmentation_extension.so'
+        exclude group : 'libagora_spatial_audio_extension.so'
+        exclude group : 'libagora_super_resolution_extension.so'
+        exclude group : 'libagora_udrm3_extension.so'
+        exclude group : 'libagora_video_quality_analyzer_extension.so'
+        exclude group : 'libagora-fdkaac.so'
+        exclude group : 'libagora-ffmpeg.so'
+        exclude group : 'libagora-soundtouch.so'
+        exclude group : 'libagora-rtc-sdk.so'
+    }
+
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation "androidx.tonyodev.fetch2:xfetch2:3.1.6"
+//emoji
+    implementation 'com.vanniktech:emoji-facebook:0.7.0'
+    implementation 'com.vanniktech:emoji-ios:0.7.0'
+    implementation 'com.vanniktech:emoji-twitter:0.7.0'
+    implementation "com.vanniktech:emoji-google:0.8.0"
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.0")
+
+    implementation 'com.github.3llomi:CircularStatusView:V1.0.2'
+    implementation 'com.github.TOrnelas:SegmentedProgressBar:0.0.3'
+
+    implementation "androidx.work:work-runtime-ktx:2.8.0"
+    implementation "com.github.CanHub:Android-Image-Cropper:4.3.2"
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
+    implementation 'com.github.yangjie10930:EpMedia:v1.0.1'
+    implementation 'com.burhanrashid52:photoeditor:2.0.0'
+
+    implementation ('io.socket:socket.io-client:2.1.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.github.flutterwave.rave-android:rave_android:2.1.39'
+    implementation 'com.android.billingclient:billing:5.1.0'
+    implementation("androidx.biometric:biometric:1.2.0-alpha04")
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.20"
+    //implementation files('C:/Users/HP/Downloads/sinch-android-rtc-5.9.4+7f4dc0a/sinch-android-rtc-5.9.4+7f4dc0a/libs/sinch-android-rtc-5.9.4+7f4dc0a.aar')
+
+    def room_version = "2.5.1"
+    // To use Kotlin annotation processing tool (kapt)
+    kapt("androidx.room:room-compiler:$room_version")
+
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
+    implementation "com.twilio.sdk:twilio:9.6.2"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // Retrofit with Scalar Converter
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+}

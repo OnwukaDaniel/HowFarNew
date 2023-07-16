@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".howfarchat.chat.FragmentDisplayImage">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/display_image"
+        android:layout_width="match_parent"
+        android:transitionName="hero_image"
+        android:layout_height="match_parent"  />
+
+</FrameLayout>

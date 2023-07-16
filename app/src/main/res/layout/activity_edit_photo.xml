@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".photo.EditPhotoFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/editToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/edit_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:backgroundTint="#39020202"
+                android:text="Done" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/edit_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="8dp"
+                android:src="@drawable/ic_close"
+                app:tint="?android:textColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:layout_weight="1"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="8dp"
+                android:src="@drawable/ic_redo"
+                app:tint="#fff" />
+
+            <ImageView
+                android:id="@+id/edit_undo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="8dp"
+                android:src="@drawable/ic_undo"
+                app:tint="?android:textColor" />
+
+            <ImageView
+                android:id="@+id/edit_redo"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="8dp"
+                android:src="@drawable/ic_redo"
+                app:tint="?android:textColor" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:layout_weight="1"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="8dp"
+                android:src="@drawable/ic_redo"
+                app:tint="#fff" />
+
+            <Button
+                android:id="@+id/edit_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:text="Save"
+                android:textColor="?android:textColor"
+                android:visibility="gone"
+                app:tint="?android:textColor" />
+
+        </LinearLayout>
+
+        <ja.burhanrashid52.photoeditor.PhotoEditorView
+            android:id="@+id/photoEditorView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:photo_src="@drawable/ic_avatar" />
+
+        <EditText
+            android:id="@+id/edit_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeActionLabel="actionSend"
+            android:maxLines="1"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="25dp"
+            android:singleLine="true"
+            android:text="Add text"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/edit_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+            <TextView
+                android:id="@+id/edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="12dp"
+                android:text="T"
+                android:textColor="?android:textColor"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:tint="#000" />
+
+            <ImageView
+                android:id="@+id/edit_pen"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_gesture"
+                app:tint="?android:textColor" />
+
+            <ImageView
+                android:id="@+id/edit_emoji"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_faces"
+                app:tint="?android:textColor" />
+
+            <ImageView
+                android:id="@+id/edit_filter"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_photo_filter"
+                app:tint="?android:textColor" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter1"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter2"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter3"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter4"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter5"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter6"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+                <ja.burhanrashid52.photoeditor.PhotoEditorView
+                    android:id="@+id/filter7"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_marginHorizontal="4dp"
+                    app:photo_src="@drawable/filter_image1" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/edit_pen_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editToolbar">
+
+            <ImageView
+                android:id="@+id/edit_pen1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_gesture"
+                app:tint="?android:textColor" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/edit_pen2"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_gesture"
+                app:tint="?android:textColor" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/edit_pen3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_gesture"
+                app:tint="?android:textColor" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/edit_pen4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_gesture"
+                app:tint="?android:textColor" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/edit_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:gravity="center">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#FFFFFF"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#B6A3A3"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#C51162"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#AA00FF"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#6200EA"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#00C853"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#915555"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#AEEA00"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#FFAB00"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#FF6D00"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#DD2C00"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#1A237E"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/color13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#000000"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:shapeAppearance="@style/CircleImage" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

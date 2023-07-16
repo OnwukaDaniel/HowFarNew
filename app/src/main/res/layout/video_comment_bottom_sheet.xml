@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:text="Comments"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="8dp"
+                android:text="Comments"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/close_comments"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="8dp"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="10dp"
+                app:tint="?android:attr/textColorPrimary"
+                android:src="@drawable/cancel"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/et_comments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="9"
+                android:textSize="15sp"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="16dp"
+                android:background="#00000000"
+                android:hint="Add Comment"  />
+
+            <ImageView
+                android:id="@+id/send_comments"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_send_arrow"
+                android:textSize="20sp"
+                app:tint="?android:attr/textColorPrimary" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_comments"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/empty_comments"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"  />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="42dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

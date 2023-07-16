@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="?colorPrimary"/>
+    <item android:bottom="90dp"
+        android:right="28dp"
+        android:left="28dp"
+        android:top="50dp">
+        <bitmap android:gravity="center"
+            android:height="10dp"
+            android:width="10dp"
+            android:src="@drawable/app_icon_sec"/>
+    </item>
+</layer-list>

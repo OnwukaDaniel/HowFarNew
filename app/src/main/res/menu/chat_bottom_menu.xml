@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/chat_chat"
+        android:icon="@drawable/chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/chat_like"
+        android:icon="@drawable/like_black"
+        android:title="Like" />
+    <item
+        android:id="@+id/chat_pay"
+        android:icon="@drawable/transfer_black"
+        android:title="Pay" />
+    <item
+        android:id="@+id/chat_setting"
+        android:icon="@drawable/settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/chat_more"
+        android:icon="@drawable/ic_more"
+        android:title="More" />
+</menu>

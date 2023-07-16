@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent"
+        app:controller_layout_id="@layout/item_player_controler"
+        app:played_color="@color/transparent"
+        app:resize_mode="fit"
+        app:scrubber_color="@color/transparent"
+        app:show_timeout="1000"
+        app:shutter_background_color="@color/transparent"
+        app:surface_type="texture_view"
+        app:unplayed_color="@color/transparent">
+
+    </com.google.android.exoplayer2.ui.StyledPlayerView>
+
+    <ImageView
+        android:id="@+id/player_view_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/lout_user"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_searchuser_dp_bg"
+                android:backgroundTint="@color/pink"
+                android:padding="2dp"
+                android:visibility="gone"
+                app:shapeAppearance="@style/CircleImage"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/likeBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.6"
+                    android:shadowDy="0.6"
+                    android:shadowRadius="1"
+                    android:elevation="15dp"
+                    android:src="@drawable/like_white" />
+
+                <TextView
+                    android:id="@+id/tv_likeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/amidum"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.6"
+                    android:shadowDy="0.6"
+                    android:shadowRadius="1"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/loveBtn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.6"
+                    android:shadowDy="0.6"
+                    android:shadowRadius="1"
+                    android:elevation="15dp"
+                    android:src="@drawable/heart_off" />
+
+                <TextView
+                    android:id="@+id/tv_loveCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/amidum"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.6"
+                    android:shadowDy="0.6"
+                    android:shadowRadius="1"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_comment"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:shadowColor="#000000"
+                android:elevation="15dp"
+                android:src="@drawable/comment"
+                app:tint="@color/appPrimaryColor" />
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amidum"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:shadowColor="#000000"
+                android:textColor="@color/white"
+                android:text="0"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/img_share"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="20dp"
+                android:padding="2dp"
+                android:shadowColor="#000000"
+                android:shadowDx="0.6"
+                android:shadowDy="0.6"
+                android:shadowRadius="1"
+                android:src="@drawable/ic_share_fill"
+                android:visibility="gone"
+                app:tint="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/img_sound"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_black_disk"
+                android:orientation="vertical"
+                android:padding="10dp"
+                tools:src="@drawable/dummy_user">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/bg_gradient_round"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_music_videolist"
+                    app:tint="@color/white" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="1dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/bg_gradient_round"
+                    android:backgroundTint="@color/pink"
+                    android:padding="1dp"
+                    app:shapeAppearance="@style/CircleImage" />
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/amidum"
+                    android:maxLines="1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"
+                    tools:text="\@your_samantha" />
+
+            </LinearLayout>
+
+            <com.azur.howfar.utils.socialview.SocialTextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/amidum"
+                android:maxWidth="250dp"
+                android:maxLength="180"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:text='Baku Mosambi'
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:animation_duration="500" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="3dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_sound_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:fontFamily="@font/amidum"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/video_owner_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/amidum"
+            android:maxLines="1"
+            android:text="Created by YOU"
+            android:shadowColor="#000000"
+            android:paddingHorizontal="20dp"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/delete_video"
+            android:layout_width="wrap_content"
+            android:foreground="@drawable/gray_ripple"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="16dp"
+            android:layout_margin="4dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/amidum"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="Delete video"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:trackThickness="1dp"
+        android:indeterminate="true"
+        app:indicatorColor="@color/pink"
+        app:trackColor="@color/white" />
+
+</RelativeLayout>

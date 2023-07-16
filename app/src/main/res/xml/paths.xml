@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <cache-path
+        name="SharedImages"
+        path="Media/SharedImages/" />
+    <cache-path
+        name="SharedImages"
+        path="Practice/Watermark/" />
+    <cache-path
+        name="SharedVideos"
+        path="Media/Videos/Watermark/" />
+    <cache-path
+        name="SharedVideo"
+        path="Media/SharedVideos/" />
+</paths>

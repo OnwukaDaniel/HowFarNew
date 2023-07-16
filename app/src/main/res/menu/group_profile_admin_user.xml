@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/message"
+        android:title="Chat"
+        android:tint="#000"
+        android:icon="@drawable/ic_message"/>
+
+    <item
+        android:id="@+id/make_admin"
+        android:title="Make admin"
+        android:tint="#000"
+        android:icon="@drawable/ic_avatar"/>
+
+    <item
+        android:id="@+id/remove_user"
+        android:title="Remove user"
+        android:tint="#000"
+        android:icon="@drawable/delete"/>
+
+</menu>

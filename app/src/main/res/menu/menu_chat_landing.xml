@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/chat_tv"
+        android:icon="@drawable/tv_icon"
+        android:title="TV" />
+    <item
+        android:id="@+id/data_and_airtime"
+        android:icon="@drawable/like_blue"
+        android:title="Data and airtime" />
+    <item
+        android:id="@+id/market_place"
+        android:icon="@drawable/like_blue"
+        android:title="Market Place" />
+    <item
+        android:id="@+id/ride"
+        android:icon="@drawable/motorcycle_icon"
+        android:title="Ride" />
+</menu>

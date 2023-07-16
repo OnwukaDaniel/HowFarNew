@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_view_status_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/view_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:visibility="gone" />
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/view_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/view_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:buffered_color="@color/pink"
+        app:resize_mode="fill"
+        app:show_buffering="never"
+        app:use_controller="false">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/view__progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="#FFFFFF"
+            app:indicatorSize="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:trackColor="#5E5E5E"
+            app:trackCornerRadius="12dp"
+            app:trackThickness="5dp" />
+
+    </com.google.android.exoplayer2.ui.StyledPlayerView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/caption_root"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/likeBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="15dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0.6"
+            android:shadowDy="0.6"
+            android:shadowRadius="1"
+            android:src="@drawable/like_white" />
+
+        <TextView
+            android:id="@+id/tv_likeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/amidum"
+            android:shadowColor="#000000"
+            android:shadowDx="0.6"
+            android:shadowDy="0.6"
+            android:shadowRadius="1"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:elevation="50dp"
+        android:padding="10dp"
+        android:shadowColor="#000000"
+        android:shadowDx="0.6"
+        android:shadowDy="0.6"
+        android:shadowRadius="1"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/caption_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/CircleImage" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/caption_root"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/loveBtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="15dp"
+            android:shadowColor="#000000"
+            android:shadowDx="0.6"
+            android:shadowDy="0.6"
+            android:shadowRadius="1"
+            android:src="@drawable/heart_off" />
+
+        <TextView
+            android:id="@+id/tv_loveCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/amidum"
+            android:shadowColor="#000000"
+            android:shadowDx="0.6"
+            android:shadowDy="0.6"
+            android:shadowRadius="1"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/reply_root"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:rotation="90"
+        app:tint="#fff"
+        android:visibility="gone"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toTopOf="@+id/caption_root"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/caption_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#A4000000"
+        app:layout_constraintBottom_toTopOf="@+id/statusTextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/view_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="20dp"
+            android:paddingHorizontal="25dp"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/statusTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/light_white"
+        app:cardCornerRadius="@dimen/_15sdp"
+        android:visibility="gone"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="5dp">
+
+            <ImageView
+                android:id="@+id/chatEmoji"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:foreground="@drawable/circular_ripple"
+                android:padding="7dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/smile" />
+
+            <com.vanniktech.emoji.EmojiEditText
+                android:id="@+id/chatInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Message..."
+                android:inputType="textCapSentences|textAutoCorrect|textMultiLine"
+                android:maxLines="4"
+                android:paddingHorizontal="5dp"
+                android:textSize="18sp"
+                android:paddingVertical="10dp"
+                android:textColor="#000000"
+                android:textColorHint="@color/color_grey"
+                app:emojiSize="@dimen/emoji_icon_size" />
+
+            <ImageView
+                android:id="@+id/statusReplySend"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_gravity="center"
+                android:foreground="@drawable/circular_ripple"
+                android:src="@drawable/ic_send_arrow"
+                app:tint="#000" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

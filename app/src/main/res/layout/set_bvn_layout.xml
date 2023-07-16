@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_height="wrap_content" >
+
+    <EditText
+        android:id="@+id/bvn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        android:hint="Bank Verification Number"
+        android:inputType="number"
+        android:maxLines="1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+        android:background="@color/napier_green"
+        android:textColor="?android:textColorPrimary"
+        android:foreground="@drawable/gray_ripple"
+        android:hint="Date of birth - 01-01-98"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="6dp"
+        android:textSize="20sp" />
+
+</LinearLayout>

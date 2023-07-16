@@ -1,0 +1,166 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HowFar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blacklight</item>
+        <item name="colorPrimaryVariant">@color/blacklight</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorOnBackground">@color/pinklight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="itemTextColor">@color/black_alpha_20</item>
+        <item name="colorOnSecondary">#000000</item>
+        <!-- Status bar color. -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeStyle">@style/Base.Widget.Material3.ActionMode</item>
+        <item name="android:textColorSecondary">#E6E6E6</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar" >false</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="colorPrimaryDark">?attr/colorPrimaryVariant</item>
+        <item name="chatBackground">@drawable/howfar_bg_light</item>
+        <!-- Customize your theme here. -->
+        <item name="android:listPreferredItemPaddingLeft">20dp</item>
+        <item name="android:listPreferredItemPaddingRight">20dp</item>
+
+        <item name="colorSurface">#E6E6E6</item>
+        <item name="colorOnSurface">?android:textColor</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="materialCalendarTheme">@style/Theme.HowFar.DatePicker</item>
+        <item name="floatingActionButtonStyle">@style/Widget.App.FloatingActionButton</item>
+    </style>
+
+    <style name="Theme.HowFar.DatePicker" parent="@style/ThemeOverlay.Material3.MaterialCalendar">
+        <item name="colorPrimary">@color/kellygreen</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.FloatingActionButton.Primary</item>
+    </style>
+
+    <!--App Themes-->
+
+    <style name="Theme.HowFar.Sky" parent="Theme.HowFar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sky</item>
+        <item name="colorPrimaryVariant">#095DA5</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:windowBackground">#89C9FF</item>
+        <item name="colorSurface">?attr/colorPrimaryVariant</item>
+        <item name="cardBackgroundColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.HowFar.Grey" parent="Theme.HowFar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#B1B1B1</item>
+        <item name="colorPrimaryVariant">#B1B1B1</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:windowBackground">#BFBFBF</item>
+        <item name="colorSurface">?attr/colorPrimaryVariant</item>
+        <item name="cardBackgroundColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.HowFar.KellyGreen" parent="Theme.HowFar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/kellygreen</item>
+        <item name="colorPrimaryVariant">#C989FF1F</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSurface">?attr/colorPrimaryVariant</item>
+        <item name="android:windowBackground">@color/Sanddtorm</item>
+        <item name="cardBackgroundColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.HowFar.Pink" parent="Theme.HowFar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryVariant">#BA0C53</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:windowBackground">#FF418F</item>
+        <item name="colorSurface">?attr/colorPrimaryVariant</item>
+        <item name="cardBackgroundColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.HowFar.SS" parent="Theme.HowFar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ss_colorAccent</item>
+        <item name="colorPrimaryVariant">#5D9F00</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:windowBackground">#BCFF5E</item>
+        <item name="cardBackgroundColor">?attr/colorPrimaryVariant</item>
+        <item name="colorSurface">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.HowFar.ChatLanding" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:background">@color/white</item>
+        <item name="tabTextColor">#CCCCCC</item>
+        <item name="tabSelectedTextColor">@color/appPrimaryColor</item>
+        <item name="tabIndicatorColor">@color/appPrimaryColor</item>
+        <item name="android:textColorPrimary">#000000</item>
+
+    </style>
+
+    <style name="Theme.HowFar.LightCard" parent="CardView">
+        <item name="cardBackgroundColor">#E6E6E6</item>
+        <item name="colorSurface">#E6E6E6</item>
+    </style>
+
+    <style name="Base.Widget.Material3.ActionMode" parent="">
+        <item name="background">@color/grayinsta</item>
+        <item name="iconTint">@color/white</item>
+        <item name="backgroundSplit">?attr/actionModeSplitBackground</item>
+        <item name="height">?attr/actionBarSize</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.AppCompat.Widget.ActionMode.Subtitle</item>
+        <item name="closeItemLayout">@layout/abc_action_mode_close_item_material</item>
+        <item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
+    </style>
+
+    <style name="ActionModeTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Theme.HowFar.Splash" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blacklight</item>
+        <item name="colorPrimaryVariant">@color/blacklight</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorOnBackground">@color/pinklight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="itemTextColor">@color/black_alpha_20</item>
+        <item name="colorOnSecondary">#000000</item>
+        <!-- Status bar color. -->
+        <item name="android:textColorSecondary">#474747</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <!-- Customize your theme here. -->
+        <item name="android:listPreferredItemPaddingLeft">20dp</item>
+        <item name="android:listPreferredItemPaddingRight">20dp</item>
+
+    </style>
+
+    <style name="CircleImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="AppThemeWithActionBar" parent="Theme.AppCompat.Light.DarkActionBar" tools:keep="@style/AppThemeWithActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="CircularStatusView">
+        <attr name="portion_width" format="dimension" />
+        <attr name="portion_color" format="color" />
+        <attr name="portion_spacing" format="dimension" />
+        <attr name="portions_count" format="integer" />
+    </declare-styleable>
+</resources>

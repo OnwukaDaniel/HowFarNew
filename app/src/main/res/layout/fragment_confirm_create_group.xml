@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/confirm_group_root"
+    android:background="?android:windowBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".howfarchat.groupChat.FragmentConfirmCreateGroup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="32dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/confirm_group_image"
+                android:layout_width="70dp"
+                app:shapeAppearance="@style/CircleImage"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_avatar" />
+
+            <com.vanniktech.emoji.EmojiTextView
+                android:id="@+id/confirm_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/amidum"
+                android:maxLines="1"
+                android:paddingVertical="8dp"
+                android:text="Group Name"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="20sp"
+                app:emojiSize="@dimen/emoji_icon_size" />
+
+            <LinearLayout
+                android:id="@+id/confirm_group_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp">
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:id="@+id/confirm_group_contacts_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp" />
+
+                <com.vanniktech.emoji.EmojiTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=" contacts selected"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/confirm_group_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/row_contact_card" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/confirm_group_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="5dp"
+        android:foreground="@drawable/gray_ripple"
+        app:cardBackgroundColor="?colorPrimaryVariant"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amidum"
+            android:maxLines="1"
+            android:paddingVertical="4dp"
+            android:text="Create Group"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="15sp"
+            app:emojiSize="@dimen/emoji_icon_size" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

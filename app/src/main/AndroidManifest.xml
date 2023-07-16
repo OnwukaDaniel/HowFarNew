@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.azur.howfar">
+
+    <uses-sdk tools:overrideLibrary="com.otaliastudios.transcoder" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.Manifest.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.PREVENT_POWER_KEY" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".MainApplication"
+        android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|uiMode|screenLayout|keyboard|layoutDirection"
+        android:exported="false"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HowFar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.SearchUsersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".howfarwallet.AddMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".howfarwallet.ActivityFingerPrint"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name=".activity.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".posts.PostViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chat.SocketRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".photo.EditPhotoFragment"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name=".camera.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".videos.ChooseVideoTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".howfarwallet.ActivityWallet"
+            android:exported="false" />
+        <activity
+            android:name=".howfarchat.chat.UserProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".howfarchat.chat.ActivitySearchChat"
+            android:exported="false"
+            android:noHistory="true"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".howfarchat.ChatLanding"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".match.RandomMatchActivity"
+            android:exported="true" />
+        <activity
+            android:name=".user.wallet.CashOutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".livestreamming.LiveSummaryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".user.guestuser.GuestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".livestreamming.HostLiveActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:exported="true"
+            android:supportsPictureInPicture="true" />
+        <activity
+            android:name=".user.freecoins.FreeHFCentsActivity"
+            android:exported="true" />
+        <activity android:name=".user.wallet.MyWalletActivity" />
+        <activity android:name=".user.vip.VipPlanActivity" />
+        <activity android:name=".user.EditProfileActivity" />
+        <activity android:name=".user.FollowrsListActivity" />
+        <activity
+            android:name=".chat.GuestChatActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity
+            android:name=".posts.UploadPostActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".livestreamming.WatchLiveActivity"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:supportsPictureInPicture="true" />
+        <activity android:name=".livestreamming.GotoLiveActivity" />
+        <activity
+            android:name=".activity.LoginActivityActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.SpleshActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/Theme.HowFar.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
+            android:value="false" />
+
+        <activity
+            android:name=".user.wallet.ActivityHFCoinTransfer"
+            android:theme="@style/Theme.HowFar.Splash"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".howfarchat.chat.ChatActivity2"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".howfarchat.groupChat.ActivityNewGroup"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".howfarchat.groupChat.GroupChatActivity" />
+        <activity android:name=".howfarchat.status.ActivityCreateStatus" />
+        <activity
+            android:name=".dilog.IncomingCallDialog"
+            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
+            android:noHistory="true"
+            android:supportsPictureInPicture="true" />
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".howfarchat.chat.ActivityCustomizeChat" />
+        <activity android:name=".howfarchat.chat.ActivityCustomizeChatWallpaper" />
+        <activity android:name=".reels.VideoListActivity" />
+        <activity android:name=".howfarchat.chat.ChatActivitySupport" />
+        <activity
+            android:name=".howfarwallet.SuccessFailure"
+            android:noHistory="true" />
+        <activity android:name=".activity.SplashActivityLike" />
+        <activity android:name=".howfarchat.chat.ChatActivity" />
+        <activity android:name=".sign_up.ActivityVerificationType" />
+        <activity android:name=".activity.ActivityEnterOTP" />
+        <activity android:name=".activity.SignUpActivity" />
+        <activity android:name=".activity.ActivityEnterSignInOTP" />
+
+        <receiver
+            android:name=".broadcasts.DirectReceiver"
+            android:enabled="true" />
+        <receiver
+            android:name=".NotificationBroadcast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".services.MsgBroadcast"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".alarms.ChatAlarm" />
+
+        <service
+            android:name=".jobservice.NetworkJobScheduler"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name=".services.CallNotificationService" />
+        <service android:name=".services.AgoraDownloadService" />
+        <service
+            android:name=".jobservice.LikeJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/app_logo_round" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.azur.howfar.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+    </application>
+
+</manifest>

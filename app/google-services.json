@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1045916256722",
+    "firebase_url": "https://howfar-b24ef-default-rtdb.firebaseio.com",
+    "project_id": "howfar-b24ef",
+    "storage_bucket": "howfar-b24ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045916256722:android:9a8eb1eff3421cb89ee00b",
+        "android_client_info": {
+          "package_name": "com.azur.howfar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045916256722-dqh9tqog1e7k6bmp3o2f7flk304r875e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwBBf9fPbQxxtn2HiByC8gGKQsafOsD0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045916256722-dqh9tqog1e7k6bmp3o2f7flk304r875e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045916256722:android:059dc1a2e6bbd96a9ee00b",
+        "android_client_info": {
+          "package_name": "com.azur.howfaradmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045916256722-dqh9tqog1e7k6bmp3o2f7flk304r875e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwBBf9fPbQxxtn2HiByC8gGKQsafOsD0A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045916256722-dqh9tqog1e7k6bmp3o2f7flk304r875e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

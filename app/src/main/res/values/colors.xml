@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#650681</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#00e676</color>
+
+    <color name="app_color">#25D265</color>
+    <color name="appPrimaryColor">#282B39</color>
+    <color name="ripple_color">#868686</color>
+
+    <color name="shimmer_color">#BDBDBD</color>
+    <color name="sky_blue">#EFEFEF</color>
+
+    <color name="textColorSecondary">#757575</color>
+    <color name="blackpure">#0000</color>
+    <color name="black">#000000</color>
+    <color name="black_back">#111118</color>
+    <color name="grayinsta">#161622</color>
+    <color name="graymidum">#1C1C2E</color>
+    <color name="graydark">#1E1F2C</color>
+    <color name="blacklight">#282B39</color>
+    <color name="graylight">#686872</color>
+    <color name="offwhite">#C5C5D1</color>
+
+    <color name="purple">#660099</color>
+    <color name="purple_blue">#521EAA</color>
+
+    <color name="right_chat_bubble">#660099</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="sky">#095DA5</color>
+    <color name="pink">#BA0C53</color>
+    <color name="pink_dark">#C10451</color>
+    <color name="pinklight">#E8538F</color>
+    <color name="yellow">#FEAD2A</color>
+    <color name="batli">#1DC194</color>
+
+
+    <color name="black_alpha_20">#33000000</color>
+    <color name="black_alpha_60">#99000000</color>
+
+    <color name="light_white">#f1f1f3</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="colorTheme">#ff8000</color>
+
+    <color name="napier_green">#FFC36A</color>
+    <color name="india_red">#FFBBC3</color>
+    <color name="kellygreen">#C989FF1F</color>
+    <color name="tufs_blue">#ADD4FF</color>
+    <color name="tiffanyblue">#AAFFFB</color>
+    <color name="Sanddtorm">#FFE595</color>
+    <color name="salmonpink_1">#FFB8C1</color>
+
+    <color name="gray_icon">#686872</color>
+    <color name="text_gray">#A7A7B3</color>
+    <color name="lightblack">#463C3C3C</color>
+
+    <color name="color_grey">#999999</color>
+    <color name="color_grey2">#dfdfdf</color>
+    <color name="bg_gray">#E0E0E0</color>
+
+
+    <color name="green">#FF99CC00</color>
+    <color name="orange">#FFFFBB33</color>
+    <color name="red">#FFFF4444</color>
+    <color name="darkGreen">#FF669900</color>
+    <color name="darkRed">#FFCC0000</color>
+
+    <color name="ss_colorAccent">#5D9F00</color>
+
+    <!--Dark theme-->
+    <color name="dark_background">#272727</color>
+
+</resources>

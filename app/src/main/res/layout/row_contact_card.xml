@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_contact_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/gray_ripple"
+    app:cardBackgroundColor="#00000000">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/text_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#90FFFFFF"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:weightSum="16">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/contact_card_image"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:padding="5dp"
+            android:src="@drawable/ic_avatar"
+            app:shapeAppearance="@style/CircleImage" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="13"
+            android:orientation="vertical">
+
+            <com.vanniktech.emoji.EmojiTextView
+                android:id="@+id/contact_card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amidum"
+                android:maxLines="1"
+                android:text="+234 700000000"
+                android:textSize="18sp"
+                app:emojiSize="@dimen/emoji_icon_size" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/contact_card_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/alight"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="+234 700000000"
+                    android:textSize="12sp"
+                    app:emojiSize="@dimen/emoji_icon_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

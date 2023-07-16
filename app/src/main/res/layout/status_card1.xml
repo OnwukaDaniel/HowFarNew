@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:foreground="@drawable/gray_ripple"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/image_layout"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:padding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/status_display_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:shapeAppearance="@style/CircleImage"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/status_display_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="6dp"
+            android:textSize="8sp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/status_display"
+            app:shapeAppearance="@style/CircleImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="6dp" />
+
+        <com.devlomi.circularstatusview.CircularStatusView
+            android:id="@+id/circular_status_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:portion_color="@color/colorAccent"
+            app:portion_spacing="6dp"
+            app:portion_width="2dp" />
+
+        <ImageView
+            android:id="@+id/blue_tick"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/blue_tick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:portion_spacing="6dp"
+            app:portion_width="2dp"
+            android:visibility="gone"
+            app:portions_count="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

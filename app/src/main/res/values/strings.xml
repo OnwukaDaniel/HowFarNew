@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">HowFar</string>
+
+    <string name="video_volume_label">Tune video volume</string>
+    <string name="volume_hint">You may use these options to control intensity of audio between recorded video and (optional) chosen song.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="this_user">this_user</string>
+    <string name="ALL_PREFERENCE">ALL_PREFERENCE</string>
+
+    <string name="what_is_hf_coin">
+        1. When you receive likes and love on HowFar-LIKE section, you immediately earn a equivalent amount of HF cent, 2 cents for
+        a like and 4 cents for Love.\n\n
+        2.You can convert HF coin to your local cash.\n\n
+        3. HF coin balance Available+Withdrawing.\n\n
+        4. 250 HFCent equals 1 HFCoin </string>
+
+    <string name="about_us">Vision Statement\n\nTo make life easier for people, using just one app for chatting with friends, families, and business associates and to carry out transactions i.e. send, receive and request money from across the world. It simply shrinks time and space.\n\n\n\n\nMission Statement\n\nOur mission is to empower our customers with an excellent and efficient tool that enables them to have control over their social and financial interactions with ease.\n\n\n\n\n\n\nINTRODUCTION\n\nHowfar Mobile Application Limited is established in Nigeria and based at 102273 Marina Road, Lagos Island, Lagos, Nigeria. The company is profit making entity and can favourably compete with its competitors across the globe. Our aim of establishing the company is not only to make profit, but to contribute our own quota to the world at large.\nOur location here in Lagos Nigeria is not only strategic but also highly suitable for the kind of business we are running, as we are in the central business district of Lagos Island. Howfar Mobile Application Limited in series of Information and Communication Technology (ICT) businesses.\nThe company is now trying to expand into the social media aspect of information and communication technology through the establishment of HOWFAR.\n\nWhat is HOWFAR?\nHowFar is a multi-purpose instant messaging and mobile payment app that facilitate both social interactions and financial transactions on the same platform with multiple users. Howfar platform has the following facilities:\n-Live Stream;\n-Coin for social Media;\n-Like and Love;\n-Chatting;\n-Audio Call;\n-Video Call;\n-Game/Lotto/Betting</string>
+
+    <string name="button_allow" tools:keep="@string/button_allow">Allow</string>
+    <string name="button_deny" tools:keep="@string/button_deny">Deny</string>
+
+    <string name="hello_blank_fragment" tools:keep="@string/hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Agora Credentials-->
+    <string name="chatBubbleColor">chatBubbleColor</string>
+    <string name="chatWallpaper">chatWallpaper</string>
+    <string name="contacts_key">contacts</string>
+    <string name="in_chat_phone_key">in_chat_phone_key</string>
+    <string name="in_chat_uid">in_chat_uid</string>
+    <string name="show_notification">show_notification</string>
+    <string name="THEME_SHARED_PREFERENCE">THEME_SHARED_PREFERENCE</string>
+    <string name="moment_data">moment_data</string>
+    <string name="support_data">support_data</string>
+    <string name="default_notification_channel_id">Messages</string>
+    <string name="wallet_secret_key">wallet_secret_key</string>
+    <string name="live_switch">live_switch</string>
+    <string name="CHAT_PREFERENCES">CHAT_PREFERENCES</string>
+    <string name="WORK_CHAT_DATA">WORK_CHAT_DATA</string>
+    <string name="userToken">userToken</string>
+    <string name="userProfile">userProfile</string>
+
+</resources>

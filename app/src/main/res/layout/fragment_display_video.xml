@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_display_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3000000"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".howfarchat.chat.FragmentDisplayImage">
+
+    <com.google.android.exoplayer2.ui.StyledPlayerView
+        android:id="@+id/display_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:buffered_color="@color/pink"
+        app:resize_mode="fit"
+        app:show_buffering="never"
+        app:use_controller="false" >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/play_download"
+            android:layout_width="100dp"
+            app:shapeAppearance="@style/CircleImage"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:tint="@color/white"
+            android:src="@drawable/download_round"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/play_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:trackCornerRadius="12dp"
+            app:indicatorColor="#FFFFFF"
+            app:trackThickness="5dp"
+            app:indicatorSize="100dp"
+            app:trackColor="#5E5E5E"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/play_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#83000000"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="22dp"
+            android:paddingVertical="12dp">
+
+            <ImageView
+                android:id="@+id/play_toggle2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play_circle_outline"
+                app:tint="#FFFFFF" />
+
+            <SeekBar
+                android:id="@+id/play_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="24dp" />
+
+        </LinearLayout>
+
+    </com.google.android.exoplayer2.ui.StyledPlayerView>
+
+    <ImageView
+        android:id="@+id/player_view_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

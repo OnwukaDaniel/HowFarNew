@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/customize_chat"
+        android:title="Customize chat" />
+    <!--<item
+        android:id="@+id/wallpaper"
+        android:title="Wallpaper" />-->
+    <!--<item
+        android:id="@+id/mute_notification"
+        android:title="Mute Notification" />-->
+    <!--<item
+        android:id="@+id/clear_chat"
+        android:title="Clear chat" />-->
+
+</menu>
